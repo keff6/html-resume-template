@@ -6,6 +6,8 @@ html, body, * {
 
 #main-container {
   width: 100%;
+  background-image: url(./background.jpg);
+  background-size: cover;
 }
 
 .page {
@@ -36,6 +38,7 @@ header {
 .main-section {
   width: 70%;
   display: inline-block;
+  background-color: white;
 }
 
 .main-section > section,
@@ -52,4 +55,30 @@ header {
   width: 30%;
   display: inline-block;
   background-color: gainsboro;
+}
+
+.experience-card {
+  padding: 10px 0;
+}
+
+.experience-card .title {
+  font-size: 18px;
+}
+
+.experience-card .company {
+  font-size: 16px;
+  color: darkgrey;
+  margin-bottom: 20px;
+}
+
+.experience-card .company .name{
+  font-weight: bold;
+}
+
+.experience-card .company .duration{
+  font-size: 14px;
+}
+
+ul {
+  list-style-position: inside;
 }
