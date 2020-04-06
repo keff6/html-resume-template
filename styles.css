@@ -1,0 +1,55 @@
+html, body, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main-container {
+  width: 100%;
+}
+
+.page {
+  border: 1px solid black;
+  width: 21cm;
+  height: 29.7cm;
+  margin: 0 auto;
+}
+
+header {
+  background-color: rgb(49, 63, 78);
+  color: white;
+  padding: 20px 30px;
+  height: 10%;
+}
+
+.name, .major {
+  margin: 0;
+}
+
+.contents {
+  width: 100%;
+  height: 90%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.main-section {
+  width: 70%;
+  display: inline-block;
+}
+
+.main-section > section,
+.right-section > section {
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.3);
+}
+
+.right-section {
+  width: 30%;
+  display: inline-block;
+  background-color: gainsboro;
+}
