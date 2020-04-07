@@ -11,10 +11,10 @@ html, body, * {
 }
 
 .page {
-  border: 1px solid black;
-  width: 21cm;
-  height: 29.7cm;
+  width: 21.1cm;
+  height: 29.685cm;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 header {

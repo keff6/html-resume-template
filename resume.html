@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js" integrity="sha256-gJWdmuCRBovJMD9D/TVdo4TIK8u5Sti11764sZT1DhI=" crossorigin="anonymous"></script> 
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
   <title>Resume</title>
 </head>
 <body>
   <div id="main-container">
-    <div class="page">
+    <button id="cmd">generate PDF</button>
+    <div class="page" id="toPrint">
       <header>
         <h1 class="name">Name LastName</h1>
         <h3 class="major">Major</h3>
@@ -50,5 +55,25 @@
       </section>
     </div>
   </div>
+  <script>
+    window.html2canvas = html2canvas;
+    const btnGenerate = document.getElementById("cmd");
+    const source = window.document.getElementById("toPrint");
+
+    function generatePdf() {
+      var pdf = new jsPDF('p', 'pt', 'a4');
+      pdf.html(source, {
+        html2canvas: {
+            scale: 0.75
+        },
+        callback: function (pdf) {
+          pdf.save('clean.pdf');
+        }
+      });
+    }
+
+    btnGenerate.addEventListener('click', generatePdf);
+
+  </script>
 </body>
 </html>
