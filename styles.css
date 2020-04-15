@@ -113,7 +113,28 @@ ul {
   margin: 8px 0;
 }
 
-.certificate .date {
+.date {
   color: darkgrey;
   font-size: small;
+}
+
+.education-card {
+  font-family: Verdana, sans-serif;
+  margin: 8px 0;
+}
+
+.education-card .institution{
+  font-size: small;
+}
+
+.info-item {
+  font-family: Verdana, sans-serif;
+  font-size: small;
+  margin-top: 10px;
+}
+
+.info-item .info {
+  display: block;
+  margin-top: 6px;
+  color: darkslategrey
 }
