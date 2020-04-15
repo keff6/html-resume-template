@@ -4,6 +4,15 @@ html, body, * {
   box-sizing: border-box;
 }
 
+button {
+  height: 50px;
+  width: 150px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
 #main-container {
   width: 100%;
   background-image: url(./assets/img//background.jpg);
@@ -12,14 +21,21 @@ html, body, * {
   font-weight: 400;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .page {
   width: 21.1cm;
   height: 29.684cm;
-  margin: 0 auto;
+  margin: 0;
   box-sizing: border-box;
   padding: 0;
+  /* text-align: left; */
+}
+
+.page > * {
+  margin: 0;
 }
 
 header {
@@ -137,4 +153,29 @@ ul {
   display: block;
   margin-top: 6px;
   color: darkslategrey
+}
+
+.skill-card {
+  font-family: Verdana, sans-serif;
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.skill-level-container {
+  display: flex;
+}
+
+.disc {
+  display: inline-block;
+  background-color: #b1abab;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin-right: 2px;
+}
+
+.fill {
+  background-color: rgb(49, 63, 78);
 }
