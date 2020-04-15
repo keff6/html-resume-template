@@ -6,15 +6,20 @@ html, body, * {
 
 #main-container {
   width: 100%;
-  background-image: url(./background.jpg);
+  background-image: url(./assets/img//background.jpg);
   background-size: cover;
+  /* font-family: Verdana, sans-serif; */
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
 .page {
   width: 21.1cm;
-  height: 29.685cm;
+  height: 29.684cm;
   margin: 0 auto;
   box-sizing: border-box;
+  padding: 0;
 }
 
 header {
@@ -26,6 +31,8 @@ header {
 
 .name, .major {
   margin: 0;
+  font-family: Verdana, sans-serif;
+  font-weight: 400;
 }
 
 .contents {
@@ -46,9 +53,20 @@ header {
   padding: 20px;
 }
 
+.highlights {
+  font-family: Verdana, sans-serif;
+  font-weight: 100;
+  text-align: left;
+  word-spacing: normal;
+  font-size: small;
+}
+
 .section-title {
   font-size: 20px;
-  border-bottom: 2px solid rgba(128, 128, 128, 0.3);
+  border-bottom: 2px solid #c3bcbc;
+  font-family: Tahoma, sans-serif;
+  font-weight: 400;
+  color: #666666;
 }
 
 .right-section {
@@ -59,16 +77,19 @@ header {
 
 .experience-card {
   padding: 10px 0;
+  font-family: Verdana, sans-serif;
 }
 
 .experience-card .title {
   font-size: 18px;
+  font-family: Verdana, sans-serif;
 }
 
 .experience-card .company {
   font-size: 16px;
   color: darkgrey;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-family: Verdana, sans-serif;
 }
 
 .experience-card .company .name{
@@ -81,4 +102,18 @@ header {
 
 ul {
   list-style-position: inside;
+  list-style: disc;
+  font-family: Verdana, sans-serif;
+  font-size: small;
+  margin-left: 20px;
+}
+
+.certificate {
+  font-family: Verdana, sans-serif;
+  margin: 8px 0;
+}
+
+.certificate .date {
+  color: darkgrey;
+  font-size: small;
 }
