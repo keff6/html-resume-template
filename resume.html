@@ -30,8 +30,22 @@
                 <span class="duration">Oct 2013 - Nov 2016</span>
               </div>
               <div>
-                <ul>
+                <ul class='experience-list'>
                   <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, esse.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, esse.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-card">
+              <div class="title">Position</div>
+              <div class="company">
+                <span class="name">Company</span>
+                <span class="duration">Oct 2013 - Nov 2016</span>
+              </div>
+              <div>
+                <ul class='experience-list'>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, esse.</li>
                   <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, esse.</li>
                 </ul>
               </div>
@@ -39,11 +53,11 @@
           </section>
           <section class="certificates">
             <div class="section-title">Certificates</div>
-            <div class="certificate">
+            <div class="certificate-card">
               <div class="title">Title</div>
               <div class="date">Nov 2016</div>
             </div>
-            <div class="certificate">
+            <div class="certificate-card">
               <div class="title">Title</div>
               <div class="date">Nov 2016</div>
             </div>
@@ -108,16 +122,20 @@
     const source = window.document.getElementById("toPrint");
 
     function generatePdf() {
-      const pdf = new jsPDF('p', 'pt', 'a4');
+      const pdf = new jsPDF('p', 'pt', [595, 842]);
+      const printSource = source.cloneNode(true);
+      const lists = printSource.getElementsByClassName('experience-list');
 
-      pdf.html(source, {
+      for(const list of lists) {
+        list.style.marginLeft = '10px';
+      }
+
+      pdf.html(printSource, {
         html2canvas: {
             scale: 0.75,
-            letterRendering: true,
-            useCORS: true
         },
         callback: function (pdf) {
-          pdf.save('clean.pdf');
+          pdf.save('resume.pdf');
         }
       });
     }
