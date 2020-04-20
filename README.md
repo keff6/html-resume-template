@@ -7,5 +7,5 @@ Edit can be done only modifying the html in a static way for now. The idea is to
 + HTML5
 + CSS3
 + [jsPDF](https://github.com/MrRio/jsPDF)
-+ [html2canvas]([http://html2canvas.hertzen.com/documentation/)
++ [html2canvas](http://html2canvas.hertzen.com/documentation/)
 + javascript

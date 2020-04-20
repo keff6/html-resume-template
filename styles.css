@@ -201,3 +201,12 @@ ul {
   border-radius: 90px 0 0 90px;
   background:rgb(49, 63, 78);
 }
+
+.concentric-half {
+  background-color: rgb(49, 63, 78);
+  height: 6px;
+  width: 6px;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
