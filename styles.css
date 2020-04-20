@@ -188,8 +188,16 @@ ul {
   height: 12px;
   margin-right: 2px;
   width: 12px;
+  position: relative;
 }
 
 .fill {
   background-color: rgb(49, 63, 78);
+}
+
+.half-disc-left{
+  height:12px;
+  width:6px;
+  border-radius: 90px 0 0 90px;
+  background:rgb(49, 63, 78);
 }
